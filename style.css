@@ -1,0 +1,128 @@
+:root {
+  --bg-dark: #161618;
+  --accent: #FF801A; /* Cambia por #EC268F o tu color de marca */
+  --text-main: #FFFFFF;
+  --text-muted: #B8B8C2;
+}
+
+- {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d0d0f;
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--bg-dark);
+  border-bottom: 6px solid var(--accent);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 290px;
+  background-color: var(--accent);
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Corte angular estilo referencia */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 54px;
+  background-color: var(--bg-dark);
+  clip-path: polygon(0 100%, 100% 18%, 100% 100%);
+}
+
+.content {
+  padding: 8px 28px 36px;
+  text-align: center;
+}
+
+.brand-tag {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2rem, 7vw, 2.8rem);
+  line-height: 1.02;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.bio {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 420px;
+  margin: 0 auto 26px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 2px solid var(--text-main);
+  color: var(--text-main);
+  background: transparent;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #111113;
+}
+
+.btn-primary {
+  background-color: var(--text-main);
+  color: #111113;
+}
+
+.footer-note {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #777782;
+  letter-spacing: 0.08em;
+}
